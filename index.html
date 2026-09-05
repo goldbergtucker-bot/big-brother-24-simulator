@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Tucker's Big Brother 24 Simulator</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+<header>
+
+    <h1>BIG BROTHER 24</h1>
+
+    <p>Custom Interactive Season Simulator</p>
+
+</header>
+
+
+<main>
+
+
+    <!-- NAVIGATION -->
+
+    <div class="tabs">
+
+        <button
+            class="tab-button active"
+            onclick="showPage('cast', this)">
+
+            CAST
+
+        </button>
+
+
+        <button
+            class="tab-button"
+            onclick="showPage('season', this)">
+
+            SIMULATOR
+
+        </button>
+
+
+        <button
+            class="tab-button"
+            onclick="showPage('results', this)">
+
+            RESULTS
+
+        </button>
+
+    </div>
+
+
+
+    <!-- CAST PAGE -->
+
+    <section id="cast" class="page active">
+
+        <h2>Customize Your Cast</h2>
+
+        <p>
+            Create your own Big Brother cast!
+        </p>
+
+
+        <div class="cast-controls">
+
+            <button onclick="addHouseguest()">
+
+                + Add Houseguest
+
+            </button>
+
+
+            <button onclick="saveCast()">
+
+                💾 Save Cast
+
+            </button>
+
+
+            <button onclick="loadCast()">
+
+                📂 Load Cast
+
+            </button>
+
+
+            <button onclick="resetCast()">
+
+                🔄 Reset Cast
+
+            </button>
+
+        </div>
+
+
+        <div
+            id="castContainer"
+            class="cast-grid">
+
+        </div>
+
+    </section>
+
+
+
+    <!-- SIMULATOR PAGE -->
+
+    <section id="season" class="page">
+
+        <h2>Big Brother 24 Simulator</h2>
+
+
+        <div class="season-info">
+
+            <h3 id="weekTitle">
+
+                Week 1
+
+            </h3>
+
+
+            <p id="twistInfo">
+
+                Loading twist...
+
+            </p>
+
+        </div>
+
+
+
+        <!-- HOH -->
+
+        <div class="competition-box">
+
+            <h3>
+                👑 Head of Household Competition
+            </h3>
+
+
+            <button onclick="runHOH()">
+
+                Play HOH Competition
+
+            </button>
+
+
+            <div id="hohResult"></div>
+
+        </div>
+
+
+
+        <!-- NOMINATIONS -->
+
+        <div class="competition-box">
+
+            <h3>
+                🔴 Nomination Ceremony
+            </h3>
+
+
+            <button onclick="runNominations()">
+
+                Make Nominations
+
+            </button>
+
+
+            <div id="nominationResult"></div>
+
+        </div>
+
+
+
+        <!-- VETO -->
+
+        <div class="competition-box">
+
+            <h3>
+                🏆 Power of Veto Competition
+            </h3>
+
+
+            <button onclick="runVeto()">
+
+                Play POV Competition
+
+            </button>
+
+
+            <div id="vetoResult"></div>
+
+        </div>
+
+
+
+        <!-- VETO CEREMONY -->
+
+        <div class="competition-box">
+
+            <h3>
+                🏆 Veto Ceremony
+            </h3>
+
+
+            <button onclick="runVetoCeremony()">
+
+                Hold Veto Ceremony
+
+            </button>
+
+
+            <div id="vetoCeremonyResult"></div>
+
+        </div>
+
+
+
+        <!-- EVICTION -->
+
+        <div class="competition-box">
+
+            <h3>
+                🚪 Live Eviction
+            </h3>
+
+
+            <button onclick="runEviction()">
+
+                Hold Eviction
+
+            </button>
+
+
+            <div id="evictionResult"></div>
+
+        </div>
+
+
+
+        <button
+            class="next-week-button"
+            onclick="nextWeek()">
+
+            Next Week →
+
+        </button>
+
+
+    </section>
+
+
+
+    <!-- RESULTS PAGE -->
+
+    <section id="results" class="page">
+
+        <h2>Season Results</h2>
+
+        <div id="resultsContainer">
+
+            No results yet.
+
+        </div>
+
+    </section>
+
+
+</main>
+
+
+<script src="app.js"></script>
+
+</body>
+
+</html>
