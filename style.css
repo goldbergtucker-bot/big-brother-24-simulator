@@ -1,0 +1,313 @@
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+
+    margin: 0;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: #10131a;
+
+    color: white;
+
+}
+
+
+/* HEADER */
+
+header {
+
+    text-align: center;
+
+    padding: 35px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #152a75,
+            #551c7a
+        );
+
+    border-bottom:
+        5px solid #ffd000;
+
+}
+
+
+header h1 {
+
+    margin: 0;
+
+    font-size: 45px;
+
+    letter-spacing: 4px;
+
+}
+
+
+header p {
+
+    font-size: 18px;
+
+}
+
+
+/* MAIN AREA */
+
+main {
+
+    max-width: 1300px;
+
+    margin: auto;
+
+    padding: 25px;
+
+}
+
+
+/* TABS */
+
+.tabs {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    margin-bottom: 30px;
+
+    flex-wrap: wrap;
+
+}
+
+
+.tab-button {
+
+    background: #252a35;
+
+    color: white;
+
+    border: none;
+
+    padding: 14px 28px;
+
+    border-radius: 8px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+}
+
+
+.tab-button.active {
+
+    background: #ffd000;
+
+    color: black;
+
+}
+
+
+/* PAGES */
+
+.page {
+
+    display: none;
+
+}
+
+
+.page.active {
+
+    display: block;
+
+}
+
+
+/* BUTTONS */
+
+button {
+
+    background: #2563eb;
+
+    color: white;
+
+    border: none;
+
+    padding: 12px 18px;
+
+    margin: 5px;
+
+    border-radius: 7px;
+
+    cursor: pointer;
+
+    font-size: 15px;
+
+}
+
+
+button:hover {
+
+    opacity: 0.8;
+
+}
+
+
+/* CAST GRID */
+
+.cast-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(250px, 1fr)
+        );
+
+    gap: 20px;
+
+}
+
+
+/* HOUSEGUEST CARD */
+
+.houseguest-card {
+
+    background: #1d222d;
+
+    padding: 15px;
+
+    border-radius: 15px;
+
+    border: 2px solid #353c4d;
+
+}
+
+
+.houseguest-card img {
+
+    width: 100%;
+
+    height: 260px;
+
+    object-fit: cover;
+
+    border-radius: 10px;
+
+}
+
+
+.houseguest-card input {
+
+    width: 100%;
+
+    padding: 8px;
+
+    margin-top: 8px;
+
+    border-radius: 5px;
+
+    border: none;
+
+}
+
+
+/* STAT AREA */
+
+.stat-label {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-top: 10px;
+
+}
+
+
+.stat-label input {
+
+    width: 65px;
+
+}
+
+
+/* SIMULATOR BOXES */
+
+.competition-box {
+
+    background: #1d222d;
+
+    padding: 22px;
+
+    margin-bottom: 20px;
+
+    border-radius: 12px;
+
+    border-left:
+        5px solid #ffd000;
+
+}
+
+
+.season-info {
+
+    text-align: center;
+
+    background: #302060;
+
+    padding: 20px;
+
+    border-radius: 12px;
+
+    margin-bottom: 25px;
+
+}
+
+
+.next-week-button {
+
+    display: block;
+
+    margin: 30px auto;
+
+    font-size: 20px;
+
+    background: #16a34a;
+
+}
+
+
+/* RESULTS */
+
+#resultsContainer {
+
+    background: #1d222d;
+
+    padding: 25px;
+
+    border-radius: 12px;
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    header h1 {
+
+        font-size: 30px;
+
+    }
+
+}
